@@ -1,0 +1,32 @@
+table {
+        border: 1px solid green;
+        border-collapse: collapse;
+        }
+        td, td, th {
+        border: 1px solid green;
+        padding: 10px;
+        }
+        th {
+        border: 3px solid green;
+        }
+        .special{
+            color:orange;
+        }
+        #very-special{
+            color: pink;
+        }
+h2 {
+      color: yellow;
+      text-align: center;
+      font-family: times, serif; font-size:20pt; font-style:italic;
+      }
+h3 {
+      color: blue;
+      text-align: center;
+      font-family: times, serif; font-size:20pt; font-style:italic;
+      }
+h4 {
+      color: red;
+      text-align: center;
+      font-family: times, serif; font-size:20pt; font-style:italic;
+      }
