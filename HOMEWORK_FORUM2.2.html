@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>HOMEWORK_FORUM2.2</title>
+    <style>
+        table {
+        border: 5px solid blue;
+        border-collapse: collapse;
+        }
+        td, td, th {
+        border: 5px solid blue;
+        border-collapse: collapse;
+        }
+        th {
+        border: 5px solid blue;
+        border-collapse: collapse;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.querySelector('form').onkeyup = function() {
+                if (document.querySelector('#text').value.length > 0) {
+                    document.querySelector('#submit').disabled = false;
+                } else {
+                    document.querySelector('#submit').disabled = true;
+                }
+            };
+            document.querySelector('form').onsubmit = function() {
+                let task = document.querySelector('#text').value;
+                console.log(task);
+                let th = document.createElement("th")
+                th.innerHTML = task;
+                document.querySelector('ol').append(th);
+                //document.querySelector('ol').insertBefore(th, document.querySelector('ol').children[0]);
+                document.querySelector('#text').value = "";
+
+                document.querySelector('#submit').disabled = true;
+                return false;
+            };
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.querySelector('form1').onkeyup = function() {
+                if (document.querySelector('#text').value.length > 0) {
+                    document.querySelector('#submit').disabled = false;
+                } else {
+                    document.querySelector('#submit').disabled = true;
+                }
+            };
+            document.querySelector('form1').onsubmit = function() {
+                let task = document.querySelector('#Amount').value;
+                console.log(task);
+                let th = document.createElement("th")
+                th.innerHTML = task;
+                document.querySelector('ol').append(th);
+                //document.querySelector('ol').insertBefore(th, document.querySelector('ol').children[0]);
+                document.querySelector('#Amount').value = "";
+
+                document.querySelector('#submit').disabled = true;
+                return false;
+            };
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+
+            document.querySelector('form2').onkeyup = function() {
+                if (document.querySelector('#text').value.length > 0) {
+                    document.querySelector('#submit').disabled = false;
+                } else {
+                    document.querySelector('#submit').disabled = true;
+                }
+            };
+            document.querySelector('form2').onsubmit = function() {
+                let task = document.querySelector('#Reviews').value;
+                console.log(task);
+                let th = document.createElement("th")
+                th.innerHTML = task;
+                document.querySelector('ol').append(th);
+                //document.querySelector('ol').insertBefore(th, document.querySelector('ol').children[0]);
+                document.querySelector('#Reviews').value = "";
+
+                document.querySelector('#submit').disabled = true;
+                return false;
+            };
+        });
+    </script>
+</head>
+<body>
+<h1>HERE ARE THE RESULTS</h1>
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>Car Company</th>
+        <th>Price</th>
+        <th>User Classification</th>
+    </tr>
+    </thead>
+</table>
+<br><br>
+    <ol>
+    </ol>
+    <form>
+        <input type="text" id="text" placeholder="Add the name">
+        <input type="submit" id="submit" value="Add to table">
+    </form>
+    <form>
+        <input name="Amount" list="Amount" placeholder="Price">
+        <input type="submit" id="list" value="Add to table">
+        <datalist id="Amount">
+            <option value="2.000.000€">
+            <option value="3.000.000€">
+            <option value="4.000.000€">
+            <option value="5.000.000€">
+            <option value="10.000.000€">
+            </option>
+        </datalist>
+    </form>
+    <form>
+        <input name="Reviews" list="Reviews" placeholder="Reviews">
+        <input type="submit" id="list2" value="Add to table">
+        <datalist id="Reviews">
+            <option value="1">
+            <option value="1.5">
+            <option value="2">
+            <option value="2.5">
+            <option value="3">
+            <option value="3.5">
+            <option value="4">
+            <option value="4.5">
+            <option value="5">
+            </option>
+        </datalist>
+    </form>
+</body>
